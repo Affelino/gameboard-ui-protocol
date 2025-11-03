@@ -2,8 +2,11 @@
 
 *A minimal text-based protocol for controlling physical gameboards — with square-level piece detection and RGB LED indicators.*
 
-This protocol enables a simple ("dumb") board to act as a user interface for digital board games, such as chess or checkers.  
-It supports tracking of physical moves, guiding the player with lights, and synchronizing board state with external game logic.
+This protocol enables boards of varying intelligence levels to act as a user interface for digital board games such as chess or checkers.  
+Even the simplest implementation — a "dumb" board with no internal state — can meaningfully interact with an external game system.
+
+More advanced boards can add features like verifying user actions, maintaining internal board state, or guiding the player through error correction.  
+📄 For an overview of possible capability levels, see [ProtocolLevels.md](./ProtocolLevels.md).
 
 Part of the **NoEi project series**.
 
