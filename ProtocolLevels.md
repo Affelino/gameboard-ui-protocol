@@ -98,3 +98,11 @@ Effectively, this level turns the board into a **standalone electronic chess com
 - Levels 0, 0.1, and 1 all use the same base message protocol.
 - Levels are additive — each builds on the capabilities of the previous one.
 - These tiers help clarify where features belong and allow implementations to grow gradually from minimal to advanced.
+
+---
+
+## 📄 License
+
+This documentation is licensed under the  
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  
+See the [LICENSE](./LICENSE) file for full details.
