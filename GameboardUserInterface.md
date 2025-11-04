@@ -110,3 +110,9 @@ Some basic board-level commands are available via tapping the sides of the board
 Triggers a full board reset. The board will reinitialize and guide the player through removing or re-adding pieces as needed.
 
 ---
+
+## 📄 License
+
+This documentation is licensed under the  
+[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  
+See the [LICENSE](./LICENSE) file for full details.
