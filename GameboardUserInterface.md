@@ -2,7 +2,7 @@
 
 ## Indicator Lights
 
-Each square on the board contains one or more RGB LEDs (typically 1 or 4), which are used to indicate specific actions. These indications are defined in the [Board Message API](BoardMessageAPI.md). Current light patterns are:
+Each square on the board contains one or more RGB LEDs (typically 1 or 4), which are used to indicate specific actions. Current light patterns are:
 
 - **Slow blinking red** — Pick up the piece from this square
 - **Slow blinking green** — Place a piece on this square
