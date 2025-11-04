@@ -8,7 +8,7 @@ Even the simplest implementation — a "dumb" board with no internal state — c
 More advanced boards can add features like verifying user actions, maintaining internal board state, or guiding the player through error correction.  
 Depending on the implementation level, some of the protocol messages may not be required.
 
-📄 For an overview of possible capability levels, see [ProtocolLevels.md](./ProtocolLevels.md).
+📄 For an overview of possible capability levels, see [ProtocolLevels.md](./ProtocolLevels.md).  
 📄 Special considerations of using simple protocol like this to implement chess UI, see [GameboardUserInterface.md](./GameboardUserInterface.md).
 
 Part of the **NoEi project series**.
