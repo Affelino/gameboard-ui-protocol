@@ -72,23 +72,23 @@ Multiple messages can be sent on the same line, separated by whitespace.
 
 ### Generic (Both Directions)
 
-| Code | Description     | Example |
-|------|------------------|---------|
-| 1    | Pick-up event    | `-f2`   |
-| 2    | Put-down event   | `+f4`   |
+| Message | Description      | Example |
+|---------|------------------|---------|
+|    1    | Pick-up event    | `-f2`   |
+|    2    | Put-down event   | `+f4`   |
 
 ---
 
 ### Server → Board
 
-| Code | Description                    | Example                            |
-|------|--------------------------------|------------------------------------|
-| 3    | Indicate valid moves           | `*f3`                              |
-| 4    | Invalid move warning           | `!f5`                              |
-| 5    | Clear indicators               | `.f4`, or just `.` for all squares |
-| 6    | Indicate piece to place        | `^e1`                              |
-| 7    | Set board state                | `S<position>`                      |
-| 8    | Query square status            | `?e1`                              |
+| Message | Description                    | Example                            |
+|---------|--------------------------------|------------------------------------|
+|    3    | Indicate valid moves           | `*f3`                              |
+|    4    | Invalid move warning           | `!f5`                              |
+|    5    | Clear indicators               | `.f4`, or just `.` for all squares |
+|    6    | Indicate piece to place        | `^e1`                              |
+|    7    | Set board state                | `S<position>`                      |
+|    8    | Query square status            | `?e1`                              |
 
 Example for full board setup:  
 ```
@@ -99,16 +99,24 @@ SRNBQKBNRPPPPPPPP................................pppppppprnbqkbnr
 
 ### Board → Server
 
-| Code | Description                    | Example                                  |
-|------|--------------------------------|------------------------------------------|
-| 7    | Report board state             | `RNBQKBNRPPPPPPPP................................pppppppprnbqkbnr` |
-| 9    | Report square + piece count    | `#30` (hex)                              |
+| Message | Description                    | Example                                                            |
+|---------|--------------------------------|--------------------------------------------------------------------|
+|    7    | Report board state             | `RNBQKBNRPPPPPPPP................................pppppppprnbqkbnr` |
+|    9    | Report square + piece count    | `#30` (hex)                                                        |
 
-#### Hex Format Details
+#### Hex Code Explanation (`#xx`)
 
-- `0x3F` – Number of pieces (max 64)
-- `0x40` – Square occupied (1) or not (0)
-- `0x80` – Reserved for future use
+This is a bitmask used to encode multiple states in a compact reply:
+
+- `0x1F` – Number of pieces on the board, excluding the square that was queried (max 31)
+- `0x20` – Occupied flag for the requested square (1 = yes, 0 = no)
+- `0xC0` – Reserved (future use)
+
+Example:  
+`#3F` →  
+- 0x1F = 31 pieces
+- 0x20 = square is occupied  
+- Reserved = 0
 
 ---
 
