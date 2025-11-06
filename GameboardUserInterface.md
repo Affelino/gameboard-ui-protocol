@@ -9,6 +9,8 @@ Each square on the board contains one or more RGB LEDs (typically 1 or 4), which
 - **Fast blinking red** — Invalid move: wrong piece picked up or dropped in an illegal location
 - **Fast blinking blue** — Place the indicated piece here (e.g., during setup or promotion)
 
+[![Demo video of the indicators](https://img.youtube.com/vi/4G0m1lEOfHU/mqdefault.jpg)](https://www.youtube.com/watch?v=4G0m1lEOfHU)
+
 ---
 
 ## Moving the Pieces Properly
