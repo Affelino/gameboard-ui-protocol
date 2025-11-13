@@ -10,7 +10,7 @@ Depending on the implementation level, some of the protocol messages may not be 
 
 📄 For an overview of possible capability levels, see [ProtocolLevels.md](./ProtocolLevels.md).  
 📄 Special considerations of using a simple protocol like this to implement a chess UI, see [GameboardUserInterface.md](./GameboardUserInterface.md).  
-🔧 Reference hardware and firmware used to test and develop this protocol will be available in the [gameboard_hw_fw](https://github.com/Affelino/gameboard-hw-fw) repository.
+🔧 Reference hardware and firmware used to test and develop this protocol will be available in the [gameboard-hw-fw](https://github.com/Affelino/gameboard-hw-fw) repository.
 
 Part of the **NoEi project series**.
 
